@@ -34,7 +34,7 @@ class Person
     end
 end
 
-# ****************************************************************************
+# *****************************************************************************************
 # Implementing Instance Variables
 
 class Dog
@@ -54,7 +54,7 @@ class Dog
   puts lassie.name
   
 
-#   ******************************************************************************
+# ****************************************************************************************
 # Defining Getter and Setter Methods
 
 class Dog
@@ -76,3 +76,50 @@ class Dog
   # call the Dog#name method
   puts odie.name
   
+# ****************************************************************************************
+# Attribute Readers and Writers
+class Dag
+  attr_reader :name
+  attr_writer :name
+end
+
+chuhuahua = Dag.new
+chuhuahua.name = "Jonny"
+puts chuhuahua.name
+
+# 
+
+class Person
+  attr_reader :first_name, :last_name
+
+  def name=(full_name)
+    first_name, last_name = full_name.split
+    @first_name = first_name
+    @last_name = last_name
+  end
+
+  def name
+    "#{@first_name} #{@last_name}".strip
+  end
+
+end
+
+jay_z = Person.new
+jay_z.name = "Allan Ngoma"
+
+puts jay_z.first_name
+
+
+puts jay_z.last_name
+
+puts jay_z.name
+
+
+# ------------Test
+# Define a class called Cat.
+    # 1. Use the attr_accessor macro to create a setter and getter method for a cat's name.
+    # 2. Write a method, #meow, that outputs "meow!" to the terminal using the puts method
+    # when called on an instance of Cat.
+
+
+# The #initialize Method
