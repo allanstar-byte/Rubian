@@ -121,5 +121,44 @@ puts jay_z.name
     # 2. Write a method, #meow, that outputs "meow!" to the terminal using the puts method
     # when called on an instance of Cat.
 
+# *************************************************************************************
+# If we want each instance of our class to be created with certain data, we must define an #initialize method.
+# The #initialize Method - is a method that is called automatically whenever .new is used.
+# When .new is called, Ruby will automatically invoke the #initialize method and forward 
+# the argument (or arguments) from .new to #initialize.
+class Dog
+  attr_reader :breed
+  def initialize(breed)
+    @breed = breed
+  end
+end
 
-# The #initialize Method
+boni = Dog.new("Bonito")
+puts boni.breed 
+
+# ***************Test
+# 1. Person#initialize with a Name
+#     Define a Person class in. In the class,
+#     define an #initialize method that accepts an argument for the person's name. 
+#     That argument should be stored within a @name instance variable.
+
+# 2. Dog#initialize with Name and Breed defaulting to "Mutt"
+#     Define a Dog class in lib/dog.rb. In the class, define an #initialize
+#     method that accepts an argument for the dog's name. That argument should
+#     be stored within a @name instance variable.
+
+#     Additionally, Dog#initialize should accept a second optional argument for 
+#     the dog's breed stored in an instance variable @breed. When no breed is 
+#     provided, it should default to "Mutt".
+
+# 1.
+
+class Person
+  attr_reader :name
+  def initialize(name)
+    @name = name
+  end
+end
+
+persona = Person.new("Allan")
+puts persona.name
