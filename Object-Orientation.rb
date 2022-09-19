@@ -162,3 +162,21 @@ end
 
 persona = Person.new("Allan")
 puts persona.name
+
+# *****************************************************************************8
+class Dog
+
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def bark
+    "Woofs!"
+  end
+
+end
+
+new_dog = Dog.new("Fido")
+puts "The dogs name is #{new_dog.name} and it's #{new_dog.bark}"
