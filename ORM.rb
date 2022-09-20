@@ -5,3 +5,7 @@
 
 #     Cutting down on repetitive code
 #     Implementing conventional patterns that are organized and sensical
+
+# CONNECTING TO THE DB
+
+db_connect = Sqlite3 :: Database.new("/archive/sqlite-sakila.db")
